@@ -1,6 +1,8 @@
 # fastapi
 
 Set Up Virtual Enviroment
+
+
 $ python3.8 -m venv venv 
 
 $ source venv/bin/activate
