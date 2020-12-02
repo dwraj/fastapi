@@ -10,4 +10,5 @@ $ source venv/bin/activate
 $ export PYTHONPATH=$PWD
 
 Install requirements
+
 (venv)$ pip install -r requirements.txt
