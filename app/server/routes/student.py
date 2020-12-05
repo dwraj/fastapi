@@ -56,5 +56,5 @@ async def delete_student_data(id: str):
   deleted_student = await delete_student(id)
   if deleted_student:
     return ResponseModel( "Student with ID: {} removed".format(id), "Student deleted succesfully")
-  else
+  else:
     return ErrorrResponseModel("An error occurred", 404, "Student with id {0} doesn't exist".format(id))
