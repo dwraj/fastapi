@@ -2,11 +2,11 @@
 import motor.motor_asyncio
 from bson.objectid import ObjectId
 
-MONGO_DETAILS = "mongodb://localhost:27017"
+MONGO_DETAILS = "MONGO URI"
 #create a client connection
 client  = motor.motor_asyncio.AsyncIOMotorClient(MONGO_DETAILS)
 #reference a database called students
-database = client.students
+database = client.testDB
 #reference a collection called student_collection
 #these are just references so await isn't neccesary
 student_collection = database.get_collection("students_collection")
@@ -27,7 +27,7 @@ def student_helper(student) -> dict:
  #gets all students in the database
 async def retrieve_students():
   students = []
-  async for student in student.collection.find():
+  async for student in student_collection.find():
     students.append(student_helper(student))
   return students
 
