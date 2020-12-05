@@ -1,10 +1,11 @@
 #forming the database connection
 import motor.motor_asyncio
 from bson.objectid import ObjectId
+from settings import MONGO_DETAILS
 
-MONGO_DETAILS = "MONGO URI"
+MONGO_STRING = MONGO_DETAILS
 #create a client connection
-client  = motor.motor_asyncio.AsyncIOMotorClient(MONGO_DETAILS)
+client  = motor.motor_asyncio.AsyncIOMotorClient(MONGO_STRING)
 #reference a database called students
 database = client.testDB
 #reference a collection called student_collection
